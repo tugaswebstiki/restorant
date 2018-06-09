@@ -1,0 +1,89 @@
+body{
+	background-color:#f9f9f9;
+	font-size:16px
+	color:#444;
+	font-family: sans-serif;
+}
+ 
+.content{
+	width: 80%;
+	margin: 10px auto;
+}
+ 
+/*header*/
+header{
+	background-color: white;
+	padding: 20px 10px;
+	border-radius: 5px;
+	border: 1px solid #f0f0f0;
+	margin-bottom: 10px;
+}
+ 
+header h1.judul,
+header h3.deskripsi{
+	text-align: center;	
+}
+ 
+/*menu navigasi*/
+.sidebar{
+	width: 10%;
+	float: left;
+	background-color: #87CEFA;
+	border: 1px solid #f0f0f0;
+	border-radius: 8px;	
+	margin-bottom: 10px;
+}
+ 
+div.sidebar ul {
+	list-style:none;
+	overflow: hidden;
+}
+ 
+ 
+div.sidebar ul li {
+	float:left;		
+	text-transform:uppercase;
+}
+ 
+div.sidebar ul li a {
+	display:block;	
+	padding:0 20px;
+	text-decoration:none;
+	color:#2c2c2c;
+	font-family: sans-serif;
+	font-size:13px;
+	font-weight:400;
+	transition:all 0.3s ease-in-out;
+}
+ 
+div.sidebar ul li a:hover,
+div.sidebar ul li a.hoverover {	
+	cursor: pointer;	
+	color:#fff;
+}
+ 
+ 
+div.badan{
+	float: left;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #f0f0f0;
+	margin-bottom: 10px;
+	width: 45%;
+}
+ 
+div.halaman{
+	text-align: center;
+	padding: 30px 20px;	
+}
+div.sidebar{
+	
+}
+.cl{
+	clear: both;
+}
+(select anggota.nama)as'Peminjam Terbanyak' , (tabel_pinjam.jumlah_pinjam)as'Jumlah Pinjaman'
+    '> from tabel_pinjam
+    '> inner join anggota
+    '> on anggota.id_anggota = tabel_pinjam.id_anggota
+    '> where jumlah_pinjam =(select max(jumlah_pinjam) from tabel_pinjam);
